@@ -1,11 +1,19 @@
-#[derive(Debug)]
+use serde_derive::Serialize;
+
+pub enum OutputFormat {
+    STDOUT,
+    JSON,
+    YAML,
+}
+
+#[derive(Serialize, Debug)]
 pub enum ProgrammingLanguage {
     PHP,
     Python,
     Javascript,
 }
 
-#[derive(Debug)]
+#[derive(Serialize, Debug)]
 pub enum PackageManager {
     Composer,
     Pip,
@@ -14,7 +22,7 @@ pub enum PackageManager {
     Pnpm,
 }
 
-#[derive(Debug)]
+#[derive(Serialize, Debug)]
 pub enum PHPFramework {
     Laravel,
 }
