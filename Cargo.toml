@@ -1,5 +1,5 @@
 [package]
-name = "stackcheck"
+name = "stack-checker"
 version = "0.1.0"
 edition = "2021"
 
