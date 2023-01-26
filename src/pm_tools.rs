@@ -18,10 +18,10 @@ pub struct PMTools {
     contents: String,
 }
 
-impl From<&str> for PMTools {
-    fn from(path: &str) -> Self {
+impl From<String> for PMTools {
+    fn from(path: String) -> Self {
         let package_manager =
-            Self::detect_package_manager(path).expect("Failed to detect package manager.");
+            Self::detect_package_manager(path.as_str()).expect("Failed to detect package manager.");
 
         let contents = match package_manager {
             PackageManager::Composer => read_to_string(path.to_owned() + "/composer.json").unwrap(),

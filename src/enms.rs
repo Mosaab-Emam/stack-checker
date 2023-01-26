@@ -1,9 +1,12 @@
 use serde_derive::Serialize;
 
+#[derive(Debug)]
 pub enum OutputFormat {
     STDOUT,
     JSON,
     YAML,
+    HTML,
+    PDF,
 }
 
 #[derive(Serialize, Debug)]

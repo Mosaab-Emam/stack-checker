@@ -28,6 +28,7 @@ impl StackChecker {
             OutputFormat::STDOUT => println!("{:?}", self),
             OutputFormat::JSON => println!("{}", serde_json::to_string(self).unwrap()),
             OutputFormat::YAML => println!("{}", serde_yaml::to_string(self).unwrap()),
+            _ => panic!("Output format not supported yet."),
         }
     }
 }
